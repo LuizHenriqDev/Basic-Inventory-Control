@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Control</title>
+    <link rel="stylesheet" href="style.css"> <!-- imports the CSS file -->
+</head>
+<body>
+    <center><h1>Inventory Control</h1></center> 
+    <h2>My Sales Inventory</h2>
+
+    <!-- table to display products, quantity, and remove button -->
+    <table border="1">
+        <tr>
+            <th>Products</th>
+            <th>Quantity in Stock</th>
+            <th>Actions</th> 
+        </tr>
+        <!-- rows representing products with a remove button for each -->
+        <tr>
+            <td>control</td>
+            <td>20</td>
+            <td><button onclick="removeProduct(this)">remove</button></td>
+        </tr>
+        <tr>
+            <td>USB cable</td>
+            <td>60</td>
+            <td><button onclick="removeProduct(this)">remove</button></td>
+        </tr>
+        <tr>
+            <td>mono audio earphones</td>
+            <td>10</td>
+            <td><button onclick="removeProduct(this)">remove</button></td>
+        </tr>
+        <tr>
+            <td>8D audio earphones</td>
+            <td>90</td>
+            <td><button onclick="removeProduct(this)">Remove</button></td>
+        </tr>
+    </table>
+
+    <!-- adding a new product -->
+    <h3>Add a New Product</h3>
+    <label for="productName">Name of the new product:</label>
+    <input type="text" id="productName" placeholder="Name of the new product">
+    <label for="quantityProduct">Quantity:</label>
+    <input type="text" id="quantityProduct" placeholder="Quantity">
+    <button onclick="addProduct()">Add</button>
+
+    <!-- updating product quantity -->
+    <h3>Update Product Quantity</h3>
+    <label for="productNameUpdate">Product name:</label>
+    <input type="text" id="productNameUpdate" placeholder="Product name">
+    <label for="quantityUpdate">New quantity:</label>
+    <input type="text" id="quantityUpdate" placeholder="Quantity">
+    <button onclick="updateQuantity()">Update</button>
+
+    <!-- product information -->
+    <h3 id="differentProducts">Different products: 4</h3>
+    <h3 id="totalQuantity">Total quantity of products in stock: 180</h3>
+    <br>
+    <br>
+    <footer>Research credits: OpenAI-ChatGPT; W3schools</footer>
+
+    <script src="main.js"></script> 
+</body>
+</html>
+
+
